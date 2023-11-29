@@ -15,7 +15,7 @@ const Header = () => {
     return (
       <>
         {scroll ? (
-            <div className="w-[100%] h-[80px] flex justify-center fixed bg-[#716DF2]">
+            <div className="w-[100%] h-[80px] flex justify-center fixed bg-[#716DF2] z-10">
           <div className="w-[95%] flex items-center justify-between ">
               <h3 className="text-[37px] text-[#fff]">easyPay</h3>
 
@@ -35,7 +35,7 @@ const Header = () => {
           </div>
     </div>
         ) : (
-            <div className="w-[100%] h-[80px] flex justify-center fixed bg-transparent">
+            <div className="w-[100%] h-[80px] flex justify-center fixed bg-transparent z-10">
           <div className="w-[95%] flex items-center justify-between ">
               <h3 className="text-[37px] text-[#fff]">easyPay</h3>
 
