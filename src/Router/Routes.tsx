@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Homelayout } from "../Components";
+import { Adminlayout, Homelayout } from "../Components";
 import Homepage from "../Pages/Homepage";
+import Home from "../Pages/Admindashboardpage/Home";
 
 export const Element = createBrowserRouter([
     {
@@ -10,5 +11,15 @@ export const Element = createBrowserRouter([
             index: true,
             element: <Homepage />
         }]
+    },
+    {
+        path: "/admin",
+        element: <Adminlayout />,
+        children: [
+            {
+                index: true,
+                element: <Home />
+            }
+        ]
     }
 ])
