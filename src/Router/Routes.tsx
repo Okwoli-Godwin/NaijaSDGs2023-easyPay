@@ -5,7 +5,7 @@ import Home from "../Pages/Admindashboardpage/Home";
 import Stafflayout from "../Components/Layout/Stafflayout";
 import Staffhome from "../Pages/Staffdashboardpage/Staffhome";
 import TransactionHistory from "../Pages/Admindashboardpage/TransactionHistory";
-import Staffs from "../Pages/Admindashboardpage/Staffs";
+
 
 export const Element = createBrowserRouter([
     {
@@ -28,10 +28,7 @@ export const Element = createBrowserRouter([
                 path: "transaction-history",
                 element:<TransactionHistory/>
             },
-            {
-                path:"staffs",
-                element:<Staffs/>
-            }
+            
         ]
     },
     {
