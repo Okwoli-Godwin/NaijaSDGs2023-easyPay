@@ -14,13 +14,13 @@ const Effortless = () => {
                         </div>
                         <h3 className="ml-[20px]">Comprehensive Financial Planning</h3>
                     </div>
-                    <div className="flex items-center mt-[25px]">
+                    <div className="flex items-center mt-[18px]">
                         <div className="w-[20px] h-[20px] flex justify-center items-center bg-[#fff] rounded-[100px] text-[14px] text-[#716DF2]">
                             <IoCheckmarkDoneSharp />
                         </div>
                         <h3 className="ml-[20px]">Personalized Approach</h3>
                     </div>
-                    <div className="flex items-center mt-[25px]">
+                    <div className="flex items-center mt-[18px]">
                         <div className="w-[20px] h-[20px] flex justify-center items-center bg-[#fff] rounded-[100px] text-[14px] text-[#716DF2]">
                             <IoCheckmarkDoneSharp />
                         </div>
