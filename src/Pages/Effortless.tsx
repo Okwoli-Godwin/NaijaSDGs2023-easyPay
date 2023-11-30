@@ -26,6 +26,10 @@ const Effortless = () => {
                         </div>
                         <h3 className="ml-[20px]">Investment Management</h3>
                     </div>
+
+                    <button className="w-[180px] h-[40px] bg-[#E1E1E1] rounded-[4px] flex justify-center items-center  text-[#716DF2] mt-[30px]">
+                      About Us
+                  </button>
                 </div>
 
                 <div className="w-[58%] flex">
