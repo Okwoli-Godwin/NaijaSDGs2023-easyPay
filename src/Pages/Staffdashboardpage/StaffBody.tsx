@@ -12,7 +12,11 @@ const StaffBody:React.FC = () => {
                 staff
             </button>
         </div>
-    <StaffCard/>
+<div className='grid grid-cols-3 gap-4 px-5 max-lg:grid-cols-2 max-md:grid-cols-1'>
+<StaffCard/>
+<StaffCard/>
+<StaffCard/>
+</div>
     </div>
   )
 }
