@@ -4,6 +4,7 @@ import Homepage from "../Pages/Homepage";
 import Home from "../Pages/Admindashboardpage/Home";
 import Stafflayout from "../Components/Layout/Stafflayout";
 import Staffhome from "../Pages/Staffdashboardpage/Staffhome";
+import TransactionHistory from "../Pages/Admindashboardpage/TransactionHistory";
 
 export const Element = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ export const Element = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
+            }, 
+            {
+                path: "transaction-history",
+                element:<TransactionHistory/>
             }
         ]
     },
