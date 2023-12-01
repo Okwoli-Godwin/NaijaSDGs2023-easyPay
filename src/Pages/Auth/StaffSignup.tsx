@@ -18,16 +18,20 @@ const StaffSignup = () => {
                 <p className="w-[480px] text-center mt-[20px]">Get a unique bank account number that  enables your company to pay   employees' salaries through the wallet.</p>
                 
                 <div className="w-[100%] flex flex-col mt-[40px]">
-                    <h3>Company Name</h3>
-                    <input type="text" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] outline-none border border-gray-300" placeholder="my company"/>
+                    <h3>Name</h3>
+                    <input type="text" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] outline-none border border-gray-300" placeholder="FullName"/>
                 </div>
                 <div className="w-[100%] flex flex-col mt-[20px]">
-                    <h3>Company Email</h3>
-                    <input type="email" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="mycompany@gmail.com"/>
+                    <h3>Email</h3>
+                    <input type="email" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="myemail@gmail.com"/>
                 </div>
                 <div className="w-[100%] flex flex-col mt-[20px]">
-                    <h3>Admin Name</h3>
-                    <input type="text" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="my name"/>
+                    <h3>Company's Name</h3>
+                    <input type="text" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="my company"/>
+                </div>
+                <div className="w-[100%] flex flex-col mt-[20px]">
+                    <h3>Position</h3>
+                    <input type="text" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="staff"/>
                 </div>
                 <div className="w-[100%] flex flex-col mt-[20px]">
                     <h3>Password</h3>
