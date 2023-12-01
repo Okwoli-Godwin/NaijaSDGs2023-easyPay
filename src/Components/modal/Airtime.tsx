@@ -27,7 +27,7 @@ const Airtime = ({ isOpen, onClose }:any) => {
 {/* phone number input */}
 
 <div className="mt-10">
-    <h2 className="mb-2">Enter mobile number</h2>
+    <h2 className="mb-2">Enter recipient mobile number</h2>
 
 <label
   htmlFor="UserNumber"
