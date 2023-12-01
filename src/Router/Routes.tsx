@@ -8,6 +8,7 @@ import TransactionHistory from "../Pages/Admindashboardpage/TransactionHistory";
 import SignupOptionPage from "../Pages/Auth/SignupOptionPage";
 import SigninOptionPage from "../Pages/Auth/SigninOptionPage";
 import AdminSignup from "../Pages/Auth/AdminSignup";
+import StaffSignup from "../Pages/Auth/StaffSignup";
 
 
 export const Element = createBrowserRouter([
@@ -55,5 +56,9 @@ export const Element = createBrowserRouter([
     {
         path: "/companysignup",
         element: <AdminSignup />
+    },
+    {
+        path: "/staffsignup",
+        element: <StaffSignup />
     }
 ])
