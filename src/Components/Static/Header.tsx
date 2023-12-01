@@ -1,4 +1,5 @@
-import {useState} from "react"
+import { useState } from "react"
+import { NavLink } from "react-router-dom"
 
 const Header = () => {
     const [scroll, setScroll] = useState(false)
@@ -48,9 +49,11 @@ const Header = () => {
                   <button className="w-[120px] h-[40px] bg-[#E1E1E1] rounded-[4px] flex justify-center items-center text-[#0B73F7]">
                       Login
                   </button>
-                  <button className="w-[140px] h-[40px] bg-[#888DF2] rounded-[4px] flex justify-center items-center ml-[15px]">
+                  <NavLink to="/signupoption">
+                    <button className="w-[140px] h-[40px] bg-[#888DF2] rounded-[4px] flex justify-center items-center ml-[15px]">
                       Get Started
                   </button>
+                  </NavLink>
               </div>
           </div>
     </div>
