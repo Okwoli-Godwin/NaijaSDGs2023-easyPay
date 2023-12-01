@@ -73,9 +73,8 @@ const TransactionTable:React.FC<tableData> = ({tableName, img}) => {
        
            
         </tbody>
-    </table>
-</div>
-
+      </table>
+    </div>
   );
 };
 

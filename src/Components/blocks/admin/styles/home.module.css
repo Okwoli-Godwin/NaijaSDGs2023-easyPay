@@ -1,0 +1,43 @@
+.add_Card {
+  width: auto;
+  height: auto;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+}
+
+.card_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 20px 0;
+}
+.card_title h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card_image {
+}
+
+.card_button {
+  padding: 5px 15px;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.nobars {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.nobars::-webkit-scrollbar {
+  display: none;
+}
