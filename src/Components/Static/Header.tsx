@@ -46,9 +46,11 @@ const Header = () => {
                   <h4 className="text-[18px] mr-[40px] cursor-pointer">Features</h4>
                   <h4 className="text-[18px] mr-[40px] cursor-pointer">Contact</h4>
 
-                  <button className="w-[120px] h-[40px] bg-[#E1E1E1] rounded-[4px] flex justify-center items-center text-[#0B73F7]">
+                 <NavLink to="signinoption">
+                     <button className="w-[120px] h-[40px] bg-[#E1E1E1] rounded-[4px] flex justify-center items-center text-[#0B73F7]">
                       Login
                   </button>
+                 </NavLink>
                   <NavLink to="/signupoption">
                     <button className="w-[140px] h-[40px] bg-[#888DF2] rounded-[4px] flex justify-center items-center ml-[15px]">
                       Get Started
