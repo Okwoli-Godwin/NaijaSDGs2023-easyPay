@@ -12,7 +12,7 @@ const TransactionsHistory: React.FC = () => {
           <div className="col-span-3">Name</div>
           <div>Type</div>
           <div className="col-span-2">Date</div>
-          <div className="translate-x-[-20px]">Amount</div>
+          <div className="translate-x-[-20px] text-end">Amount</div>
         </div>
         <div className="">
           <TransactionHistoryData
