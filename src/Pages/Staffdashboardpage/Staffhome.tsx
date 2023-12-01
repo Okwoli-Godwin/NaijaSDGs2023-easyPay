@@ -9,10 +9,14 @@ import Button from "../../Components/blocks/staffDashbord/home/Button"
 import TransactionTable from "../../Components/blocks/admin/TransationTable";
 import { useState } from "react";
 import Airtime from "../../Components/modal/Airtime";
+import Bills from "../../Components/modal/Bills";
 
 
 const Staffhome = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isBillOpen, setBillOpen] = useState(false);
+  
+
 
 
 
@@ -56,7 +60,7 @@ const Staffhome = () => {
 
   </div>
   <div className=" rounded-3xl  flex justify-start ml-4 max-md:ml-0 items-center">
-  <Button onclick={()=>{}} text="Pay Bills" icon={ <MdOutlineWifiCalling />}/>
+  <Button onclick={()=>setBillOpen(true)} text="Pay Bills" icon={ <MdOutlineWifiCalling />}/>
 
   </div>
 
@@ -76,7 +80,8 @@ const Staffhome = () => {
       </div>
 
 
-      <Airtime isOpen={isModalOpen} onClose={() => setModalOpen(false)}>   <p>This is the content of the modal.</p></Airtime>
+      <Airtime isOpen={isModalOpen} onClose={() => setModalOpen(false)}/>
+      <Bills isOpen={isBillOpen} onClose={() => setBillOpen(false)}/>
     </div>
   )
 }
