@@ -1,8 +1,9 @@
 import { Typewriter } from 'react-simple-typewriter';
+import img from "../assets/skyscraper.jpeg"
 
 const Hero = () => {
   return (
-    <div className="w-[100%] flex bg-hero bg-center bg-cover bg-no-repeat">
+    <div className="w-[100%] flex bg-center bg-cover bg-no-repeat" style={{backgroundImage: `url(${img})`}}>
         <div className="w-[100%] flex bg-[rgba(0,0,0,0.7)] pt-[180px] pb-[180px] justify-center">
           <div className="w-[95%] flex flex-col items-center">
           <h1 className="text-[#fff] text-[55px] w-[480px] text-center">Business Payments Made
