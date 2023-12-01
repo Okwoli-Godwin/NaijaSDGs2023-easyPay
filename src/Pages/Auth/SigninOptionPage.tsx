@@ -1,6 +1,7 @@
 import img from "../../assets/pay.png"
 import img2 from "../../assets/bukky.png"
 import img3 from "../../assets/staff.png"
+import { NavLink } from "react-router-dom"
 
 const SigninOptionPage = () => {
   return (
@@ -17,11 +18,13 @@ const SigninOptionPage = () => {
 
                 <div className="w-[58%] flex flex-col items-center">
                     <p className="font-[500] text-[10px] text-[gray]">Let's Help you Get Started</p>
-                    <div className="w-[550px] h-[120px] items-center bg-[#377dff] rounded-[10px] mt-[35px] overflow-hidden flex transition-all duration-350 hover:cursor-pointer hover:transform-scale-99 shadow-md border border-gray-200 p-4">
+                    <NavLink to="/companysignin">
+                        <div className="w-[550px] h-[120px] items-center bg-[#377dff] rounded-[10px] mt-[35px] overflow-hidden flex transition-all duration-350 hover:cursor-pointer hover:transform-scale-99 shadow-md border border-gray-200 p-4">
 
                         <h3 className="font-[700] text-[23px] mb-[10px] ml-[12px] text-[#fff] w-[35%]">Login as a company</h3>
                         <img src={img2} alt="" className="h-[250%] object-fill w-[65%]"/>
                     </div>
+                    </NavLink>
 
                     <div className="w-[550px] h-[120px] items-center bg-[#8c0e0f] rounded-[10px] mt-[35px] overflow-hidden flex transition-all duration-350 hover:cursor-pointer hover:transform-scale-99 shadow-md border border-gray-200 p-4">
 

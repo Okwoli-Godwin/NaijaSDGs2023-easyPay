@@ -9,6 +9,7 @@ import SignupOptionPage from "../Pages/Auth/SignupOptionPage";
 import SigninOptionPage from "../Pages/Auth/SigninOptionPage";
 import AdminSignup from "../Pages/Auth/AdminSignup";
 import StaffSignup from "../Pages/Auth/StaffSignup";
+import AdminLogin from "../Pages/Auth/AdminLogin";
 
 
 export const Element = createBrowserRouter([
@@ -60,5 +61,9 @@ export const Element = createBrowserRouter([
     {
         path: "/staffsignup",
         element: <StaffSignup />
+    },
+    {
+        path: "/companysignin",
+        element: <AdminLogin />
     }
 ])
