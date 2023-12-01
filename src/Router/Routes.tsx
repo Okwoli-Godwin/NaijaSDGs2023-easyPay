@@ -11,6 +11,7 @@ import AdminSignup from "../Pages/Auth/AdminSignup";
 import StaffSignup from "../Pages/Auth/StaffSignup";
 import AdminLogin from "../Pages/Auth/AdminLogin";
 import StaffLogin from "../Pages/Auth/StaffLogin";
+import Savings from "../Pages/Staffdashboardpage/Savings";
 
 
 export const Element = createBrowserRouter([
@@ -44,6 +45,10 @@ export const Element = createBrowserRouter([
             {
                 index: true,
                 element: <Staffhome />
+            },
+            {
+                path:"savings",
+                element: <Savings/>
             }
         ]
     },
