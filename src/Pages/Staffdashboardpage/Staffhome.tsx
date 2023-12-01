@@ -4,7 +4,7 @@ import StaffBody from "./StaffBody"
 
 const Staffhome = () => {
   return (
-    <div className="w-full min-h-screen h-full bg-slate-300">
+    <div className="w-full min-h-screen h-full ">
       <StaffHeader/>
       <StaffBody/>
     </div>
