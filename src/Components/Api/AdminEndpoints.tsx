@@ -9,6 +9,24 @@ interface adminData {
     password: string;
 }
 
+interface login {
+    companyEmail: string;
+    password: string;
+    companyname: string
+}
+
 export const adminReg = async (data: adminData) => {
     return await axios.post(`${live}/register`, data).then((res) => res.data)
+}
+
+export const adminLogin = async({
+    companyEmail,
+    password,
+    companyname,
+}: login) => {
+    return await axios.post(`${live}/login`, {
+        companyEmail,
+        password,
+        companyname
+    }).then((res) => res.data)
 }
