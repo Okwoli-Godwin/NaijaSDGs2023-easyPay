@@ -4,10 +4,10 @@
 
 :root {
   font-family: Ubuntu;
-
   background-color: #fff;
   color: #242424;
-
+  --primary-color: #fff;
+  --secondary-color: #5c5c5c;
+  --accent-color: #716df2;
+  --accent-color-lite: #888df2;
 }
-
-
