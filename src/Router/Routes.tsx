@@ -5,6 +5,7 @@ import Home from "../Pages/Admindashboardpage/Home";
 import Stafflayout from "../Components/Layout/Stafflayout";
 import Staffhome from "../Pages/Staffdashboardpage/Staffhome";
 import TransactionHistory from "../Pages/Admindashboardpage/TransactionHistory";
+import SignupOptionPage from "../Pages/Auth/SignupOptionPage";
 
 
 export const Element = createBrowserRouter([
@@ -40,5 +41,9 @@ export const Element = createBrowserRouter([
                 element: <Staffhome />
             }
         ]
+    },
+    {
+        path: "/signupoption",
+        element: <SignupOptionPage />
     }
 ])
