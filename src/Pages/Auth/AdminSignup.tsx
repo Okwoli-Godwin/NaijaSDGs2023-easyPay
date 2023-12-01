@@ -33,13 +33,13 @@ const AdminSignup = () => {
                     <h3>Password</h3>
                     <input type="password" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="password"/>
                 </div>
-                <div className="w-[100%] mt-[15px] text-[15px] cursor-pointer">
-                    <h4>Forget password? click here</h4>
+                <div className="w-[100%] mt-[15px] cursor-pointer">
+                    <h4 className="text-[14px]">Forget password? <span className="text-[#716DF2]">click here</span></h4>
                 </div>
                 <button className="w-[100%] h-[43px] bg-[#888DF2] rounded-[4px] flex justify-center items-center text-[#fff] mt-[25px]">
                     Sign Up
                 </button>
-                <h4 className="mt-[10px]">Already have an account? Sign in instaed</h4>
+                <h4 className="mt-[10px]">Already have an account? <span className="text-[#716DF2]">Sign in instaed</span></h4>
             </div>
         </div>
     </div>
