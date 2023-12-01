@@ -6,11 +6,11 @@ import {
   MdOutlineAddHome,
 } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
-import { BsArrowLeftRight, BsReceipt } from "react-icons/bs";
+import { BsArrowLeftRight} from "react-icons/bs";
 import { useState } from "react";
 
 // import { useNavigate } from "react-router-dom";
-import { TiMessages } from "react-icons/ti";
+
 import Navprop from "../../props/Navprop";
 
 const Staffsidebar = () => {
@@ -69,6 +69,13 @@ const Staffsidebar = () => {
                 color={show ? "[#ff6e00]" : "white"}
                 size={show ? "xl" : "3xl"}
               />
+               <Navprop
+                text={show ? "Payment" : ""}
+                icon={<MdOutlinePayment />}
+                route="payment"
+                color={show ? "[#ff6e00]" : "white"}
+                size={show ? "xl" : "3xl"}
+              />
               <Navprop
                 text={show ? "Wards" : ""}
                 icon={<MdOutlineAddHome />}
@@ -76,13 +83,7 @@ const Staffsidebar = () => {
                 color={show ? "[#ff6e00]" : "white"}
                 size={show ? "xl" : "3xl"}
               />
-              <Navprop
-                text={show ? "Payment" : ""}
-                icon={<MdOutlinePayment />}
-                route="payment"
-                color={show ? "[#ff6e00]" : "white"}
-                size={show ? "xl" : "3xl"}
-              />
+             
             </div>
             <br />
             <p className="text-[#6b6a6a]">tools</p>
@@ -92,20 +93,7 @@ const Staffsidebar = () => {
                 show ? "items-start" : "items-center text-3xl gap-7"
               } transition-all ease-in duration-200`}
             >
-              <Navprop
-                text={show ? "Message" : ""}
-                icon={<TiMessages />}
-                route="message"
-                color={show ? "[#ff6e00]" : "white"}
-                size={show ? "xl" : "3xl"}
-              />
-              <Navprop
-                text={show ? "Bills" : ""}
-                icon={<BsReceipt />}
-                route="bills"
-                color={show ? "[#ff6e00]" : "white"}
-                size={show ? "xl" : "3xl"}
-              />
+            
               <Navprop
                 text={show ? "History" : ""}
                 icon={<MdManageHistory />}
