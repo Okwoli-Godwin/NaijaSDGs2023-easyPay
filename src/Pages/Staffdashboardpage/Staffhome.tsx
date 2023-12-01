@@ -1,4 +1,4 @@
-import StaffHeader from "../../Components/blocks/admin/StaffHeader"
+
 import Cards from "../../Components/blocks/staffDashbord/home/Cards"
 
 
@@ -7,11 +7,19 @@ import Favourites from "../../Components/blocks/staffDashbord/home/Favourites"
 import { MdOutlineWifiCalling } from "react-icons/md";
 import Button from "../../Components/blocks/staffDashbord/home/Button"
 import TransactionTable from "../../Components/blocks/admin/TransationTable";
+import { useState } from "react";
+import Airtime from "../../Components/modal/Airtime";
 
 
 const Staffhome = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+
+
+
+
   return (
-    <div className="w-full py-5 ">
+    <div className="w-full py-5 relative">
        <div className=" grid grid-cols-5 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6">
         <Cards title="Balance" figure="₦50000" figureColor="text-green-500" bottomText="Available"/>
         <Cards title="Wallet" figure="1234567890" figureColor="text-indigo-500" bottomText="Wallet number"/>
@@ -44,7 +52,7 @@ const Staffhome = () => {
    {/* airtime purchase */}
 
   <div className=" rounded-3xl  flex justify-start ml-4 max-md:ml-0 items-center">
-  <Button onclick={()=>{}} text="Buy Data/Airtime" icon={ <MdOutlineWifiCalling />}/>
+  <Button onclick={() => setModalOpen(true)} text="Buy Data/Airtime" icon={ <MdOutlineWifiCalling />}/>
 
   </div>
   <div className=" rounded-3xl  flex justify-start ml-4 max-md:ml-0 items-center">
@@ -64,8 +72,11 @@ const Staffhome = () => {
       {/* <StaffBody/> */}
       <div className="rounded-3xl overflow-hidden py-5" >
 
-      <TransactionTable tableName="Transfers" img={avatar}/>
+      <TransactionTable/>
       </div>
+
+
+      <Airtime isOpen={isModalOpen} onClose={() => setModalOpen(false)}>   <p>This is the content of the modal.</p></Airtime>
     </div>
   )
 }
