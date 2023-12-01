@@ -13,67 +13,83 @@ import AdminLogin from "../Pages/Auth/AdminLogin";
 import StaffLogin from "../Pages/Auth/StaffLogin";
 import Savings from "../Pages/Staffdashboardpage/Savings";
 
-
 export const Element = createBrowserRouter([
-    {
-        path: "/",
-        element: <Homelayout />,
-        children: [{
-            index: true,
-            element: <Homepage />
-        }]
-    },
-    {
-        path: "/admin",
-        element: <Adminlayout />,
-        children: [
-            {
-                index: true,
-                element: <Home />
-            }, 
-            {
-                path: "transaction-history",
-                element:<TransactionHistory/>
-            },
-            
-        ]
-    },
-    {
-        path: "/staff",
-        element: <Stafflayout />,
-        children: [
-            {
-                index: true,
-                element: <Staffhome />
-            },
-            {
-                path:"savings",
-                element: <Savings/>
-            }
-        ]
-    },
-    {
-        path: "/signupoption",
-        element: <SignupOptionPage />
-    },
-    {
-        path: "/signinoption",
-        element: <SigninOptionPage />
-    },
-    {
-        path: "/companysignup",
-        element: <AdminSignup />
-    },
-    {
-        path: "/staffsignup",
-        element: <StaffSignup />
-    },
-    {
-        path: "/companysignin",
-        element: <AdminLogin />
-    },
-    {
-        path: "/stafflogin",
-        element: <StaffLogin />
-    }
-])
+  {
+    path: "/",
+    element: <Homelayout />,
+    children: [
+      {
+        index: true,
+        element: <Homepage />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <Adminlayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "staffs",
+        element: <div>Staffs</div>,
+      },
+      {
+        path: "payments",
+        element: <div>Payments</div>,
+      },
+      {
+        path: "financials",
+        element: <div>Financials</div>,
+      },
+      {
+        path: "transaction-history",
+        element: <TransactionHistory />,
+      },
+      {
+        path: "settings",
+        element: <div>Settings</div>,
+      },
+    ],
+  },
+  {
+    path: "/staff",
+    element: <Stafflayout />,
+    children: [
+      {
+        index: true,
+        element: <Staffhome />,
+      },
+      {
+        path: "savings",
+        element: <Savings />,
+      },
+    ],
+  },
+  {
+    path: "/signupoption",
+    element: <SignupOptionPage />,
+  },
+  {
+    path: "/signinoption",
+    element: <SigninOptionPage />,
+  },
+  {
+    path: "/companysignup",
+    element: <AdminSignup />,
+  },
+  {
+    path: "/staffsignup",
+    element: <StaffSignup />,
+  },
+  {
+    path: "/companysignin",
+    element: <AdminLogin />,
+  },
+  {
+    path: "/stafflogin",
+    element: <StaffLogin />,
+  },
+]);
