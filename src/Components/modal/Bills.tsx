@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { IoMdCloseCircle } from 'react-icons/io';
 
-const Bills:React.FC = ({ isOpen, onClose }: any) => {
+
+interface BillsProps {
+    isOpen: boolean;
+    onClose: () => void;
+  }
+
+const Bills:React.FC<BillsProps> = ({ isOpen, onClose }) => {
 
     if (!isOpen) return null;
 
