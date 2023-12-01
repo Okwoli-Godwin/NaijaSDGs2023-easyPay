@@ -16,7 +16,7 @@ const SignupOptionPage = () => {
                 <div className="w-[1px] h-[361px] bg-[#cacaca]"></div>
 
                 <div className="w-[58%] flex flex-col items-center">
-                    <p className="font-[500] text-[14px]">Let's Help you Get Started</p>
+                    <p className="font-[500] text-[10px] text-[gray]">Let's Help you Get Started</p>
                     <div className="w-[550px] h-[120px] items-center bg-[#377dff] rounded-[10px] mt-[35px] overflow-hidden flex transition-all duration-350 hover:cursor-pointer hover:transform-scale-99 shadow-md border border-gray-200 p-4">
 
                         <h3 className="font-[700] text-[23px] mb-[10px] ml-[12px] text-[#fff] w-[35%]">Sign Up as a company</h3>
