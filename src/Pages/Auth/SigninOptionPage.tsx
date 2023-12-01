@@ -26,11 +26,13 @@ const SigninOptionPage = () => {
                     </div>
                     </NavLink>
 
-                    <div className="w-[550px] h-[120px] items-center bg-[#8c0e0f] rounded-[10px] mt-[35px] overflow-hidden flex transition-all duration-350 hover:cursor-pointer hover:transform-scale-99 shadow-md border border-gray-200 p-4">
+                    <NavLink to="/stafflogin">
+                        <div className="w-[550px] h-[120px] items-center bg-[#8c0e0f] rounded-[10px] mt-[35px] overflow-hidden flex transition-all duration-350 hover:cursor-pointer hover:transform-scale-99 shadow-md border border-gray-200 p-4">
 
                         <h3 className="font-[700] text-[23px] mb-[10px] ml-[12px] text-[#fff] w-[35%]">Login as a company's staff</h3>
                         <img src={img3} alt="" className="h-[250%] object-fill w-[65%]"/>
                     </div>
+                    </NavLink>
                 </div>
             </div>
         </div>
