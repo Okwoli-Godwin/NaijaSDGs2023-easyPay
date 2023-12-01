@@ -93,7 +93,7 @@ const Airtime = ({ isOpen, onClose }:any) => {
     </li>
     <li>
         <input type="radio" id="Airtel" name="Airtel" value="Airtel" className="hidden peer" required/>
-        <label htmlFor="Airtel" className="inline-flex text-white items-center justify-between w-full p-5 text-gray-700 bg-red-500  rounded-lg cursor-pointer  peer-checked:border-indigo-600 peer-checked:text-indigo-600  hover:bg-red-400 transition-all ease-in">                           
+        <label htmlFor="Airtel" className="inline-flex text-white items-center justify-between w-full p-5  bg-red-500  rounded-lg cursor-pointer  peer-checked:border-indigo-600 peer-checked:text-indigo-600  hover:bg-red-400 transition-all ease-in">                           
             <div className="block">
                 <div className="w-full text-lg  font-semibold">Airtel</div>
                
