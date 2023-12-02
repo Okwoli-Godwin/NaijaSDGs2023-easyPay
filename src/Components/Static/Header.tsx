@@ -1,67 +1,92 @@
-import { useState } from "react"
-import { NavLink } from "react-router-dom"
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
 
 const Header = () => {
-    const [scroll, setScroll] = useState(false)
+  const [state, setState] = useState(false);
 
-    const changeHeaderColor = () => {
-        if (window.scrollY >= 70) {
-            setScroll(true)
-        } else {
-            setScroll(false)
-        }
-    }
 
-    window.addEventListener("scroll", changeHeaderColor);
-    return (
-      <>
-        {scroll ? (
-            <div className="w-[100%] h-[80px] flex justify-center fixed bg-[#716DF2] z-10">
-          <div className="w-[95%] flex items-center justify-between ">
-              <h3 className="text-[37px] text-[#fff]">easyPay</h3>
 
-              <div className="flex items-center text-[#fff]">
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">Home</h4>
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">About</h4>
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">Features</h4>
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">Contact</h4>
-
-                  <button className="w-[120px] h-[40px] bg-[#E1E1E1] rounded-[4px] flex justify-center items-center text-[#716DF2]">
-                      Login
-                  </button>
-                  <button className="w-[140px] h-[40px] bg-[#E1E1E1] rounded-[4px] flex justify-center items-center ml-[15px] text-[#716DF2]">
-                      Get Started
-                  </button>
-              </div>
+  return (
+    <nav className="bg-white border-b sticky top-0 z-20 py-2 w-full md:text-sm md:border-none ">
+      <div className="items-center px-4 max-w-screen mx-auto md:flex md:px-16">
+        <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          <a href="#">
+            <img src="https://easy-pay-nine.vercel.app/static/media/logos2.38e5e17697002cb4dd35.png" width={100} height={50} alt="TWMA logo" />
+            {/* <h1 className="text-2xl text-[#FFA500] font-bold">TWMA</h1> */}
+          </a>
+          <div className="md:hidden">
+            <button
+              className="text-gray-500 hover:text-gray-800"
+              onClick={() => setState(!state)}
+            >
+              {state ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              )}
+            </button>
           </div>
-    </div>
-        ) : (
-            <div className="w-[100%] h-[80px] flex justify-center fixed bg-transparent z-10">
-          <div className="w-[95%] flex items-center justify-between ">
-              <h3 className="text-[37px] text-[#fff]">easyPay</h3>
+        </div>
+        <div
+          className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            state ? "block" : "hidden"
+          }`}
+        >
+          <ul className="justify-end items-center  space-y-6 md:flex md:space-x-6 md:space-y-0">
+           
+            <span className="hidden w-px h-6 bg-gray-300 md:block"></span>
+            <div className="space-y-3 items-center gap-x-6 md:flex md:space-y-0">
+              <li>
+                <NavLink to="signupoption">
+                <a
+                 
+                  className="block py-3 text-center text-gray-700 hover:text-indigo-600 border rounded-lg md:border-none"
+                >
+                  Log in
+                </a>
+                </NavLink>
+              </li>
+              <li>
+               <NavLink to="signupoption">
+               <a
+                 
+                  className="block py-3 px-4 font-medium text-center text-white bg-indigo-600  hover:text-white active:bg-indigo-600 active:shadow-none rounded-lg shadow md:inline"
+                >
+                  Get started
+                </a>
+               </NavLink>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-              <div className="flex items-center text-[#fff]">
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">Home</h4>
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">About</h4>
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">Features</h4>
-                  <h4 className="text-[18px] mr-[40px] cursor-pointer">Contact</h4>
-
-                 <NavLink to="signinoption">
-                     <button className="w-[120px] h-[40px] bg-[#E1E1E1] rounded-[4px] flex justify-center items-center text-[#0B73F7]">
-                      Login
-                  </button>
-                 </NavLink>
-                  <NavLink to="/signupoption">
-                    <button className="w-[140px] h-[40px] bg-[#888DF2] rounded-[4px] flex justify-center items-center ml-[15px]">
-                      Get Started
-                  </button>
-                  </NavLink>
-              </div>
-          </div>
-    </div>
-        )}
-      </>
-  )
-}
-
-export default Header
+export default Header;
