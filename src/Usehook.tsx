@@ -46,7 +46,7 @@ export default function App() {
     ...config,
     text: 'Credit Wallet',
     callback: (response: any) => {
-      console.log(response);
+      console.log(response)
       closePaymentModal(); // this will close the modal programmatically
     },
     onClose: () => {},
