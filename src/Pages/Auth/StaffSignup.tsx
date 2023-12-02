@@ -9,8 +9,12 @@ import Swal from "sweetalert2";
 import { staffReg } from "../../Components/Api/StaffEndpoint";
 import { registerClient } from "../../Components/Global/ReduxState";
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import spinner from "../../assets/spinner.svg"
+import { useState } from "react";
 
 const StaffSignup = () => {
+  const [loading, setLoading] = useState(false)
     const dispatch = UseAppDispatch();
     const navigate = useNavigate();
 
@@ -35,7 +39,10 @@ const StaffSignup = () => {
     const newClient = useMutation({
       mutationFn: (data: any) => staffReg(data),
       mutationKey: ["registerStaff"],
+
+      
       onSuccess: (data: any) => {
+        setLoading(false)
         // console.log("my data", data);
         dispatch(registerClient(data.data));
         Swal.fire({
@@ -60,6 +67,7 @@ const StaffSignup = () => {
       },
     });
     const submit = handleSubmit((data) => {
+      setLoading(true)
       newClient.mutate(data);
       // console.log("this is yup data", data);
       reset();
@@ -101,10 +109,14 @@ const StaffSignup = () => {
                     <h3>Password</h3>
                     <input {...register("password")} type="password" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="password"/>
                 </div>
-                <button className="w-[100%] h-[43px] bg-[#888DF2] rounded-[4px] flex justify-center items-center text-[#fff] mt-[25px]">
-                    Sign Up
+                <button className="w-[100%] h-[45px] bg-indigo-600 rounded-[4px] flex justify-center items-center text-[#fff] mt-[25px]">
+                {loading ? <img src={spinner} className="w-full h-full"/>: "Sign Up"}
                 </button>
-                <h4 className="mt-[10px]">Already have an account? <span className="text-[#716DF2]">Sign in instaed</span></h4>
+                <h4 className="mt-[10px]">Already have an account? <span className="text-[#716DF2]">
+                <NavLink to="/signinoption">
+                     Sign in instaed
+                </NavLink>
+                  </span></h4>
             </form>
         </div>
     </div>
