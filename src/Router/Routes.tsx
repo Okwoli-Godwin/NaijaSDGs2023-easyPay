@@ -15,6 +15,8 @@ import Savings from "../Pages/Staffdashboardpage/Savings";
 import Staffs from "../Pages/Admindashboardpage/Staffs";
 import Transactions from "../Pages/Staffdashboardpage/Transactions";
 import AminSavings from "../Pages/Admindashboardpage/aminSavings";
+import Easybank from "../Pages/Admindashboardpage/easyBank";
+import Payments from "../Pages/Staffdashboardpage/Payments";
 
 export const Element = createBrowserRouter([
   {
@@ -37,16 +39,20 @@ export const Element = createBrowserRouter([
       },
       {
         path: "staffs",
-        element: <Staffs/>,
+        element: <Staffs />,
       },
-      
+
       {
         path: "payments",
         element: <div>Payments</div>,
       },
       {
         path: "savings",
-        element: <AminSavings  />,
+        element: <AminSavings />,
+      },
+      {
+        path: "savings/detail",
+        element: <Easybank />,
       },
       {
         path: "financials",
@@ -76,8 +82,12 @@ export const Element = createBrowserRouter([
       },
       {
         path: "transactions",
-        element:<Transactions/>
-      }
+        element: <Transactions />,
+      },
+      {
+        path: "payments",
+        element: <Payments />,
+      },
     ],
   },
   {

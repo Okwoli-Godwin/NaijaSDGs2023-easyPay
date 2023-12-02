@@ -11,7 +11,7 @@ const Button: React.FC<iButton> = ({ title, onclick, size }) => {
     <div
       onClick={onclick}
       style={{
-        width: `calc(${size * 2.4}px)`,
+        width: `calc(${size * 2.8}px)`,
         height: `${size}px`,
         backgroundColor: "var(--accent-color)",
         color: "var(--primary-color)",
