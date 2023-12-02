@@ -26,6 +26,7 @@ const Tabs: React.FC<iTabs> = ({
         onClick={firstClick}
         style={{
           borderBottom: first ? "2px solid var(--accent-color)" : "none",
+          opacity: first ? 1 : 0.5,
         }}
         className="px-6 pb-2 flex gap-2 items-center cursor-pointer">
         <div>
@@ -37,6 +38,7 @@ const Tabs: React.FC<iTabs> = ({
         onClick={secondClick}
         style={{
           borderBottom: second ? "2px solid var(--accent-color)" : "none",
+          opacity: second ? 1 : 0.5,
         }}
         className="px-6 pb-2 flex gap-2 items-center cursor-pointer">
         <div>
@@ -48,6 +50,7 @@ const Tabs: React.FC<iTabs> = ({
         onClick={thirdClick}
         style={{
           borderBottom: third ? "2px solid var(--accent-color)" : "none",
+          opacity: third ? 1 : 0.5,
         }}
         className="px-6 pb-2 flex gap-2 items-center cursor-pointer">
         <div>

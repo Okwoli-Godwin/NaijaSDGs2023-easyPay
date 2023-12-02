@@ -1,7 +1,11 @@
 import { BsDash } from "react-icons/bs";
 import { FaNairaSign } from "react-icons/fa6";
 
-const TransactionTable = () => {
+type iTable = {
+  notitle?: boolean;
+};
+
+const TransactionTable: React.FC<iTable> = ({ notitle }) => {
   const tableItems = [
     {
       avatar:
@@ -58,15 +62,24 @@ const TransactionTable = () => {
   ];
 
   return (
-    <div className="w-full py-10">
-      <div className="items-start justify-start md:flex w-full">
-        <div className="max-w-lg">
-          <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
-            Transaction History
-          </h3>
+    <div
+      style={{
+        paddingTop: notitle ? "" : "40px",
+        paddingBottom: notitle ? "" : "40px",
+      }}
+      className="w-full">
+      {!notitle && (
+        <div className="items-start justify-start md:flex w-full">
+          <div className="max-w-lg">
+            <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
+              Transaction History
+            </h3>
+          </div>
         </div>
-      </div>
-      <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto">
+      )}
+      <div
+        style={{ marginTop: notitle ? "" : "48px" }}
+        className="shadow-sm border rounded-lg overflow-x-auto">
         <table className="w-full table-auto text-sm text-left">
           <thead className="bg-gray-50 text-gray-600 font-medium border-b">
             <tr>

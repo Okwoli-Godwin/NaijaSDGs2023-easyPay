@@ -2,6 +2,8 @@ import axios from "axios";
 
 export const live = "https://easypay-4op8.onrender.com/staff"
 
+export const chimoneyAPI = "https://api.chimoney.io/v0.2/"
+
 export interface staffData {
   companyname: string;
   email: string;
@@ -9,6 +11,24 @@ export interface staffData {
   password: string;
   position: string;
   _id : string
+
+}
+
+// "subAccount": "1234567",
+//   "turnOffNotification": false,
+//   "airtimes": [
+//     {
+//       "countryToSend": "Nigeria",
+//       "phoneNumber": "+2341000000000",
+//       "valueInUSD": 5
+//     }
+//   ]
+
+export interface aitimeData{
+
+  subAccount: string;
+  turnOffNotification: false,
+
 }
 
 export interface login {
@@ -36,4 +56,8 @@ export const getAllClients = async () => {
 
 export const getOneStaff = async(id:any) =>{
   return await axios.get(`${live}/staff/${id}`).then((res) => res.data);
+  }
+
+  export const WithdrawAirtime = async (data:aitimeData)=>{
+return await axios.post(`${chimoneyAPI}/payouts/airtime`, data).then((res)=> res.data)
   }

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Tabs from "../../Components/blocks/admin/comps/medium/tabs";
 import Bank from "../../Components/blocks/admin/comps/medium/bank";
+import SafeLock from "../../Components/blocks/admin/comps/medium/safeLock";
+import FlexNaira from "../../Components/blocks/admin/comps/medium/flexNaira";
 
 const Easybank: React.FC = () => {
   const [one, setOne] = useState(true);
@@ -33,13 +35,7 @@ const Easybank: React.FC = () => {
           />
         </div>
         <div className="mt-6">
-          {one ? (
-            <Bank />
-          ) : two ? (
-            <div>Flex Naira</div>
-          ) : three ? (
-            <div>Safe lock</div>
-          ) : null}
+          {one ? <Bank /> : two ? <FlexNaira /> : three ? <SafeLock /> : null}
         </div>
       </div>
     </div>
