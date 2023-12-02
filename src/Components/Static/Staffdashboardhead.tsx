@@ -10,7 +10,7 @@ const Staffdashboardhead:FC<headerdata> = ({title}) => {
 
 
   return (
-    <div className="w-full sticky border-b top-0 px-4 h-[10vh]  z-10 bg-[#ced9ff] flex items-center justify-between   max-md:m-auto">
+    <div className="w-full sticky border-b top-0 px-4 h-[10vh]  z-10 bg-indigo-500 flex items-center justify-between   max-md:m-auto">
       <h1 className="text-xl text-white font-semibold">{title}</h1>
       <div className="flex items-center gap-4">
 
