@@ -5,7 +5,7 @@ import { RiLogoutCircleLine } from "react-icons/ri";
 import Navprop from "../../../props/Navprop";
 import { TbPigMoney } from "react-icons/tb";
 import { BiTransfer } from "react-icons/bi";
-import { PiChartBarFill } from "react-icons/pi";
+import { PiChartBarFill } from "react-icons/pi"
 import { IoSettings } from "react-icons/io5";
 
 const TabletHeader = () => {
