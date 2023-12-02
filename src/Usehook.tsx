@@ -1,6 +1,5 @@
 
 import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
-import Swal from "sweetalert2";
 
 interface Customer {
   email: string;
@@ -16,7 +15,7 @@ interface Customizations {
 
 interface Config {
   public_key: string;
-  tx_ref: number;
+  tx_ref: any;
   amount: number;
   currency: string;
   payment_options: string;
@@ -37,8 +36,8 @@ export default function App() {
       name: 'john doe',
     },
     customizations: {
-      title: 'My store',
-      description: 'Payment for items in cart',
+      title: 'easyPay',
+      description: 'Credit Wallet',
       logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
     },
   };
@@ -48,11 +47,6 @@ export default function App() {
     text: 'Credit Wallet',
     callback: (response: any) => {
       console.log(response);
-      Swal.fire({
-        icon: response.status === 'successful' ? 'success' : 'error',
-        title: response.status === 'successful' ? 'Payment Successful!' : 'Payment Unsuccessful!',
-        text: response.status === 'successful' ? 'Your payment was successful.' : 'There was an issue with your payment.',
-      });
       closePaymentModal(); // this will close the modal programmatically
     },
     onClose: () => {},
@@ -61,7 +55,16 @@ export default function App() {
   return (
     <div className="App">
       <button style={{backgroundColor: "#716DF2", width: "180px", height: "45px", borderRadius: "3px", color: "#fff"}}>
-        <FlutterWaveButton {...fwConfig} />
+        <FlutterWaveButton text={fwConfig.text}
+    callback={fwConfig.callback}
+    onClose={fwConfig.onClose}
+    public_key={fwConfig.public_key}
+    tx_ref={fwConfig.tx_ref}
+    amount={fwConfig.amount}
+    currency={fwConfig.currency}
+    payment_options={fwConfig.payment_options}
+    customer={fwConfig.customer}
+    customizations={fwConfig.customizations}  />
       </button>
     </div>
   );
