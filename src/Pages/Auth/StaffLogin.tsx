@@ -9,8 +9,14 @@ import Swal from "sweetalert2";
 import { loginClient } from "../../Components/Api/StaffEndpoint";
 import { registerClient } from "../../Components/Global/ReduxState";
 import { useNavigate } from "react-router-dom";
+import {useState} from "react"
+import { NavLink } from "react-router-dom";
+import spinner from "../../assets/spinner.svg"
+
 
 const StaffLogin = () => {
+  const [loading, setLoading] = useState(false)
+
     const dispatch = UseAppDispatch();
 
     const navigate = useNavigate();
@@ -36,6 +42,7 @@ const StaffLogin = () => {
     mutationKey: ["loginClients"],
 
     onSuccess: (myData) => {
+      setLoading(false)
       dispatch(registerClient(myData.data));
       Swal.fire({
         title: "login",
@@ -61,6 +68,7 @@ const StaffLogin = () => {
   });
 
   const Submit = handleSubmit((data) => {
+    setLoading(true)
     signin.mutate(data);
     // console.log(`this is yup signin`, data);
     // reset();
@@ -100,10 +108,14 @@ const StaffLogin = () => {
                 <div className="w-[100%] mt-[15px] cursor-pointer">
                     <h4 className="text-[14px]">Forget password? <span className="text-[#716DF2]">click here</span></h4>
                 </div>
-                <button className="w-[100%] h-[43px] bg-[#888DF2] rounded-[4px] flex justify-center items-center text-[#fff] mt-[25px]">
-                    Sign In
+                <button className="w-[100%] h-[45px] bg-indigo-600 rounded-[4px] flex justify-center items-center text-[#fff] mt-[25px]">
+                {loading ? <img src={spinner} className="w-full h-full"/>: "Sign In"}
                 </button>
-                <h4 className="mt-[10px]">Don't have an account? <span className="text-[#716DF2]">Sign up</span></h4>
+                <h4 className="mt-[10px]">Don't have an account? <span className="text-[#716DF2]">
+                <NavLink to="/signupoption">
+                  Sign up
+                  </NavLink>
+                  </span></h4>
             </form>
         </div>
     </div>
