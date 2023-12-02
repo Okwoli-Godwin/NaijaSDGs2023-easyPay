@@ -100,7 +100,7 @@ const AdminSignup = () => {
                     <h3>Password</h3>
                     <input {...register("password")} type="password" className="w-[100%] h-[43px] rounded-[3px] mt-[5px] pl-[12px] border border-gray-300 outline-none" placeholder="password"/>
                 </div>
-                <button className="w-[100%] h-[43px] bg-[#888DF2] rounded-[4px] flex justify-center items-center text-[#fff] mt-[25px]">
+                <button className="w-[100%] h-[45px] bg-indigo-600 rounded-[4px] flex justify-center items-center text-[#fff] mt-[25px]">
                 {loading ? <img src={spinner} className="w-full h-full"/>: "Sign Up"}
                 </button>
                 <h4 className="mt-[10px]">Already have an account? <span className="text-[#716DF2]">
