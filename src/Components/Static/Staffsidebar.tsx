@@ -1,8 +1,6 @@
 
 import {
   MdDashboard,
-
-  // MdManageHistory,
   MdPayment 
 } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
