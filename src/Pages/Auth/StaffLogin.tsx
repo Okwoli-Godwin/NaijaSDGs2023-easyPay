@@ -45,7 +45,7 @@ const StaffLogin = () => {
 
 
         willClose: () => {
-          navigate("/staffdashboard");
+          navigate("/staff");
         },
       });
 

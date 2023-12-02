@@ -42,7 +42,7 @@ const AdminLogin = () => {
         timer: 2000,
         timerProgressBar: true,
         willClose: () => {
-          navigate("/");
+          navigate("/admin");
         },
       });
     },

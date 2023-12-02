@@ -14,6 +14,7 @@ import StaffLogin from "../Pages/Auth/StaffLogin";
 import Savings from "../Pages/Staffdashboardpage/Savings";
 import Staffs from "../Pages/Admindashboardpage/Staffs";
 import Transactions from "../Pages/Staffdashboardpage/Transactions";
+import AminSavings from "../Pages/Admindashboardpage/aminSavings";
 
 export const Element = createBrowserRouter([
   {
@@ -36,12 +37,16 @@ export const Element = createBrowserRouter([
       },
       {
         path: "staffs",
-        element: <Staffs />,
+        element: <Staffs/>,
       },
       
       {
         path: "payments",
         element: <div>Payments</div>,
+      },
+      {
+        path: "savings",
+        element: <AminSavings  />,
       },
       {
         path: "financials",
