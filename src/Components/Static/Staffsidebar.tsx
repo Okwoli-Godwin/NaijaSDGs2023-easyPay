@@ -1,15 +1,19 @@
 
 import {
   MdDashboard,
-  MdOutlinePayment,
+
   MdManageHistory,
-  MdOutlineAddHome,
+  MdPayment 
 } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { BsArrowLeftRight} from "react-icons/bs";
 import { useState } from "react";
+import { BiTransfer } from "react-icons/bi";
 
+import { TbPigMoney } from "react-icons/tb";
+import { PiChartBarFill } from "react-icons/pi";
 // import { useNavigate } from "react-router-dom";
+import { IoSettings } from "react-icons/io5";
 
 import Navprop from "../../props/Navprop";
 
@@ -23,8 +27,8 @@ const Staffsidebar = () => {
     <div
       className={`${
         show
-          ? "w-[210px] bg-gradient-to-b from-blue-400"
-          : "w-[90px] bg-blue-500"
+          ? "w-[210px] bg-[#706DF2]"
+          : "w-[90px] bg-[#706DF2]"
       }  flex items-center relative justify-center  transition-all ease-linear duration-[200ms]  max-md:hidden max-lg:hidden max-md:w-full h-screen max-md:h-full max-lg:w-[8%]`}
     >
       <div
@@ -43,13 +47,13 @@ const Staffsidebar = () => {
                 : "border-white w-full flex justify-center"
             } border rounded-full`}
           >
-            <div className="py-[1px] px-[6px] bg-[#DBDEE2] text-white  text-xl  rounded-full">
-              M
+            <div className="py-[1px] px-[8px] bg-[#DBDEE2] text-white  text-xl  rounded-full">
+              E
             </div>
           </div>
 
           {/* name */}
-          {show ? <p className="text-slate-500">Username</p> : null}
+          {show ? <p className="text-white">Easypay</p> : null}
         </div>
         {/* tablet logo view  */}
 
@@ -69,39 +73,47 @@ const Staffsidebar = () => {
                 color={show ? "[#ff6e00]" : "white"}
                 size={show ? "xl" : "3xl"}
               />
-               <Navprop
-                text={show ? "Payment" : ""}
-                icon={<MdOutlinePayment />}
-                route="payment"
-                color={show ? "[#ff6e00]" : "white"}
-                size={show ? "xl" : "3xl"}
-              />
+             
               <Navprop
-                text={show ? "Wards" : ""}
-                icon={<MdOutlineAddHome />}
-                route="wards"
+                text={show ? "Fund Transfers" : ""}
+                icon={<BiTransfer />}
+                route="fund-transfers"
                 color={show ? "[#ff6e00]" : "white"}
                 size={show ? "xl" : "3xl"}
               />
+                <Navprop
+                text={show ? "payments" : ""}
+                icon={<MdPayment />}
+                route="payments"
+                color={show ? "[#ff6e00]" : "white"}
+                size={show ? "xl" : "3xl"}
+              />
+                <Navprop
+                text={show ? "Savings plan" : ""}
+                icon={<TbPigMoney />}
+                route="savings"
+                color={show ? "[#ff6e00]" : "white"}
+                size={show ? "xl" : "3xl"}
+              />
+                <Navprop
+                text={show ? "Financials" : ""}
+                icon={<PiChartBarFill />}
+                route="financials"
+                color={show ? "[#ff6e00]" : "white"}
+                size={show ? "xl" : "3xl"}
+              />
+                <Navprop
+                text={show ? "Settings" : ""}
+                icon={<IoSettings />}
+                route="settings"
+                color={show ? "[#ff6e00]" : "white"}
+                size={show ? "xl" : "3xl"}
+              />
+                
              
             </div>
-            <br />
-            <p className="text-[#6b6a6a]">tools</p>
-            <br />
-            <div
-              className={`flex flex-col gap-5 ${
-                show ? "items-start" : "items-center text-3xl gap-7"
-              } transition-all ease-in duration-200`}
-            >
-            
-              <Navprop
-                text={show ? "History" : ""}
-                icon={<MdManageHistory />}
-                route="history"
-                color={show ? "[#ff6e00]" : "white"}
-                size={show ? "xl" : "3xl"}
-              />
-            </div>
+        
+          
           </div>
           {/* support nav */}
 
@@ -117,7 +129,7 @@ const Staffsidebar = () => {
                   text={show ? "log out" : ""}
                   icon={<RiLogoutCircleLine />}
                   route=""
-                  color={show ? "[#ff6e00]" : "white"}
+                  color="white"
                   size={show ? "xl" : "3xl"}
                 />
               </p>
@@ -126,7 +138,7 @@ const Staffsidebar = () => {
 
           {/* toggle */}
           <div
-            className="p-3 cursor-pointer text-lg shadow-md bg-blue-500 z-30 rounded-full text-white absolute top-14 -right-5"
+            className="p-3 cursor-pointer text-lg shadow-md bg-[#706DF2] z-30 rounded-full text-white absolute top-14 -right-5"
             onClick={() => setShow(!show)}
           >
             <BsArrowLeftRight />

@@ -1,9 +1,10 @@
-import { MdDashboard, MdManageHistory, MdOutlinePayment } from "react-icons/md";
+import { MdDashboard, MdManageHistory } from "react-icons/md";
 
 import { BsReceipt } from "react-icons/bs";
 
 import { RiLogoutCircleLine } from "react-icons/ri";
 import Navprop from "../../../props/Navprop";
+import { TbPigMoney } from "react-icons/tb";
 
 const TabletHeader = () => {
   return (
@@ -24,9 +25,11 @@ const TabletHeader = () => {
                 size="3xl"
               />
 
+
+
               <Navprop
-                icon={<MdOutlinePayment />}
-                route="payment"
+                icon={<TbPigMoney />}
+                route="Savings"
                 color="white"
                 size="3xl"
               />
