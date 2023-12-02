@@ -15,6 +15,7 @@ import Savings from "../Pages/Staffdashboardpage/Savings";
 import Staffs from "../Pages/Admindashboardpage/Staffs";
 import Transactions from "../Pages/Staffdashboardpage/Transactions";
 import AminSavings from "../Pages/Admindashboardpage/aminSavings";
+import Payments from "../Pages/Staffdashboardpage/Payments";
 
 export const Element = createBrowserRouter([
   {
@@ -77,6 +78,11 @@ export const Element = createBrowserRouter([
       {
         path: "transactions",
         element:<Transactions/>
+      },
+      {
+        path: "payments",
+        element: <Payments/>
+        
       }
     ],
   },

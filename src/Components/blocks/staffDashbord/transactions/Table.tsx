@@ -8,41 +8,52 @@ const Table = () => {
                 avatar: "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
                 name: "Liam James",
                 transactionType: "Credit",
-                phone_nimber: "+1 (555) 000-000",
-                position: "Software engineer",
-                salary: "$100K"
+                transactionFor: "salary",
+                phone_nimber: "22-11-2023",
+                amount: "N20000",
+                ID: "#002156729015",
+                status: "failed"
             },
             {
                 avatar: "https://randomuser.me/api/portraits/men/86.jpg",
                 name: "Olivia Emma",
                 transactionType: "debit",
-                phone_nimber: "+1 (555) 000-000",
-                position: "Product designer",
-                salary: "$90K"
+                transactionFor: "salary",
+                phone_nimber: "22-11-2023",
+                amount: "N20000",
+                ID: "#002156729015",
+                status: "success"
+
             },
             {
                 avatar: "https://randomuser.me/api/portraits/women/79.jpg",
                 name: "William Benjamin",
                 transactionType: "credit",
-                phone_nimber: "+1 (555) 000-000",
-                position: "Front-end developer",
-                salary: "$80K"
+                transactionFor: "salary",
+                phone_nimber: "22-11-2023",
+                amount: "N20000",
+                ID: "#002156729015",
+                status: "failed"
             },
             {
                 avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
                 name: "Henry Theodore",
                 transactionType: "credit",
-                phone_nimber: "+1 (555) 000-000",
-                position: "Laravel engineer",
-                salary: "$120K"
+                transactionFor: "salary",
+                phone_nimber: "22-11-2023",
+                amount: "N20000",
+                ID: "#002156729015",
+                status: "success"
             },
             {
                 avatar: "https://images.unsplash.com/photo-1439911767590-c724b615299d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
                 name: "Amelia Elijah",
                 transactionType: "debit",
-                phone_nimber: "+1 (555) 000-000",
-                position: "Open source manager",
-                salary: "$75K"
+                transactionFor: "salary",
+                phone_nimber: "22-11-2023",
+                amount: "N20000",
+                ID: "#002156729015",
+                status: "failed"
             },
         ]
     
@@ -61,9 +72,12 @@ const Table = () => {
                         <thead className="bg-gray-50 text-gray-600 font-medium border-b">
                             <tr>
                                 <th className="py-3 px-6">Username/Transaction</th>
+                                <th className="py-3 px-6">Type</th>
+
                                 <th className="py-3 px-6">Phone number</th>
-                                <th className="py-3 px-6">Position</th>
-                                <th className="py-3 px-6">Salary</th>
+                                <th className="py-3 px-6">amount</th>
+                                <th className="py-3 px-6">ID</th>
+                                <th className="py-3 px-6">Status</th>
                             </tr>
                         </thead>
                         <tbody className="text-gray-600 divide-y">
@@ -74,12 +88,14 @@ const Table = () => {
                                             <img src={item.avatar} className="w-10 h-10 rounded-full" />
                                             <div>
                                                 <span className="block text-gray-700 text-sm font-medium">{item.name}</span>
-                                                <span className="block text-green-700 text-xs">{item.transactionType}</span>
+                                                <span className="block text-green-700 text-xs font-semibold">{item.transactionType}</span>
                                             </div>
                                         </td>
+                                        <td className="px-6 py-4 whitespace-nowrap">{item.transactionFor}</td>
                                         <td className="px-6 py-4 whitespace-nowrap">{item.phone_nimber}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap">{item.position}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap">{item.salary}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap">{item.amount}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap">{item.ID}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-red-400 font-semibold">{item.status}</td>
                                     </tr>
                                 ))
                             }

@@ -13,7 +13,7 @@ const MobileHeader: FC = () => {
   const navigationItems = [
     { icon: <MdDashboard />, label: "Home" },
     { icon: <BiTransfer />, label: "Transactions" },
-    { icon: <MdOutlinePayment />, label: "Payment" },
+    { icon: <MdOutlinePayment />, label: "Payments" },
     { icon: <TbPigMoney />, label: "Savings" },
     { icon: <PiChartBarFill />, label: "Financials" },
   ];
