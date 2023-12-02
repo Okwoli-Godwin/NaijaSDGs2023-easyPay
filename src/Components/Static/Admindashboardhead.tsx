@@ -33,7 +33,7 @@ const Adminashboardhead: React.FC = () => {
               {location.pathname.includes("staffs") === false &&
               location.pathname.includes("payments") === false &&
               location.pathname.includes("financials") === false &&
-              location.pathname.includes("transactions") === false &&
+              location.pathname.includes("transaction-history") === false &&
               location.pathname.includes("settings") === false &&
               location.pathname.includes("notifications") === false
                 ? "dashboard"
@@ -43,7 +43,7 @@ const Adminashboardhead: React.FC = () => {
                 ? "payments"
                 : location.pathname.includes("financials")
                 ? "financials"
-                : location.pathname.includes("transactions")
+                : location.pathname.includes("transaction-history")
                 ? "transactions"
                 : location.pathname.includes("settings")
                 ? "settings"

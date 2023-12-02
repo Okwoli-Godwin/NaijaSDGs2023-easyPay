@@ -1,70 +1,113 @@
+import { BsDash } from "react-icons/bs";
+import { FaNairaSign } from "react-icons/fa6";
+
 const TransactionTable = () => {
+  const tableItems = [
+    {
+      avatar:
+        "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+      name: "Liam James",
+      transaction: "debit",
+      type: "Food",
+      date: "March 29, 2022",
+      amount: 100,
+    },
+    {
+      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+      name: "Olivia Emma",
+      transaction: "debit",
+      type: "Shopping",
+      date: "March 27, 2022",
+      amount: 90,
+    },
+    {
+      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+      name: "William Benjamin",
+      transaction: "credit",
+      type: "Others",
+      date: "March 25, 2022",
+      amount: 80,
+    },
+    {
+      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+      name: "Henry Theodore",
+      transaction: "credit",
+      type: "Food",
+      date: "March 23, 2022",
+      amount: 120,
+    },
+    {
+      avatar:
+        "https://images.unsplash.com/photo-1439911767590-c724b615299d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+      name: "Amelia Elijah",
+      transaction: "credit",
+      type: "Shopping",
+      date: "March 21, 2022",
+      amount: 75,
+    },
+  ];
+
   return (
-    <div className="relative overflow-x-auto shadow-md my-3 z-0">
-      <div className="flex items-center justify-between flex-column flex-wrap md:flex-row py-5 space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
-        <div className="flex items-center justify-center gap-3">
-          <button className="dark:text-gray-400">All</button>
-          <button className="dark:text-gray-400">Received</button>
-          <button className="dark:text-gray-400">Transfer</button>
-          <button className="dark:text-gray-400">Withdraw</button>
+    <div className="w-full py-10">
+      <div className="items-start justify-start md:flex w-full">
+        <div className="max-w-lg">
+          <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
+            Transaction History
+          </h3>
         </div>
       </div>
-      {/* table */}
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr>
-            <th scope="col" className="px-6 py-3">
-              Name
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Date
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Amount
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Status
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Action
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-            <th
-              scope="row"
-              className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-              <img
-                className="w-10 h-10 rounded-full"
-                src="/docs/images/people/profile-picture-1.jpg"
-                alt="Jese image"
-              />
-              <div className="ps-3">
-                <div className="text-base font-semibold">Neil Sims</div>
-                <div className="font-normal text-gray-500">
-                  neil.sims@flowbite.com
-                </div>
-              </div>
-            </th>
-            <td className="px-6 py-4">N20000</td>
-            <td className="px-6 py-4">21 March 2023</td>
-            <td className="px-6 py-4">
-              <div className="flex items-center">
-                <div className="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>{" "}
-                Transfer
-              </div>
-            </td>
-            <td className="px-6 py-4">
-              <a
-                href="#"
-                className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                Details
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="mt-12 shadow-sm border rounded-lg overflow-x-auto">
+        <table className="w-full table-auto text-sm text-left">
+          <thead className="bg-gray-50 text-gray-600 font-medium border-b">
+            <tr>
+              <th className="py-3 px-6">Username/transaction</th>
+              <th className="py-3 px-6">Type</th>
+              <th className="py-3 px-6">Date</th>
+              <th className="py-3 px-6">Amount</th>
+              <th className="py-3 px-6"></th>
+            </tr>
+          </thead>
+          <tbody className="text-gray-600 divide-y">
+            {tableItems.map((item, idx) => (
+              <tr key={idx}>
+                <td className="flex items-center gap-x-3 py-3 px-6 whitespace-nowrap">
+                  <img src={item.avatar} className="w-10 h-10 rounded-full" />
+                  <div>
+                    <span className="block text-gray-700 text-sm font-medium">
+                      {item.name}
+                    </span>
+                    <span
+                      style={{
+                        color:
+                          item.transaction === "credit"
+                            ? "var(--accent-color)"
+                            : "#e96a6aef",
+                      }}
+                      className="block text-xs font-semibold">
+                      {item.transaction}
+                    </span>
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">{item.type}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{item.date}</td>
+                <td className="px-6 py-4whitespace-nowrap">
+                  <div className="flex items-center">
+                    {item.transaction === "debit" && (
+                      <span>
+                        <BsDash />
+                      </span>
+                    )}
+                    <span>
+                      <FaNairaSign className="" />
+                    </span>
+                    {`${item.amount}k`}
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

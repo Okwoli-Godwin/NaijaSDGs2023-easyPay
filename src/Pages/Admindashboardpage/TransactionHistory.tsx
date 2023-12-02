@@ -3,9 +3,11 @@ import TransationTable from "../../Components/blocks/admin/TransationTable";
 
 const TransactionHistory: React.FC = () => {
   return (
-    <div className="w-full min-h-screen h-full bg-slate-400">
+    <div className="w-full min-h-screen h-full flex justify-center">
       {/* user table */}
-      <TransationTable />
+      <div className="w-[92%]">
+        <TransationTable />
+      </div>
     </div>
   );
 };
