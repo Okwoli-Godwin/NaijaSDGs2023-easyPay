@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom"
 import { Staffdashboardhead, Staffsidebar } from ".."
 import TabletHeader from "../blocks/staffDashbord/tabletHeader"
-
 import {useLocation} from "react-router-dom"
 import MobileHeader from "../blocks/staffDashbord/MobileHeader"
 
