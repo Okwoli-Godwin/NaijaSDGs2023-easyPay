@@ -1,13 +1,22 @@
-import Trusted from "./Trusted"
+
+// import Hero from "../Components/blocks/home/Hero"
+import CTA from "../Components/blocks/home/CTA"
+import FAQ from "../Components/blocks/home/Faq"
+import Features from "../Components/blocks/home/Features"
+import Team from "../Components/blocks/home/Team"
+import Users from "../Components/blocks/home/Users"
+
 import Hero from "./Hero"
-import Effortless from "./Effortless"
 
 const Homepage = () => {
   return (
     <div>
       <Hero />
-      <Trusted />
-      <Effortless />
+      <Users/>
+<Features/>
+<CTA/>
+      <Team/>
+<FAQ/>
     </div>
   )
 }
