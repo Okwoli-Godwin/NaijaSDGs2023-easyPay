@@ -10,7 +10,7 @@ const Users:React.FC = () => {
                             Who's using EasyPay?
                         </h3>
                         <p className="text-gray-600 mt-3">
-                        World leading companies and brands use our platform, and we want to show you off to. so what are you waiting for?
+                        World leading companies and brands use our platform, and we would love to show you off too. Join these awesome companies. Use easyPay!
                         </p>
                     </div>
                     <div className="mt-12 flex justify-center">

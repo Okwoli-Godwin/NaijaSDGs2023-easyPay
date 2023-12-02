@@ -5,7 +5,7 @@ import Transactions from './Transactions'
 
 const Payments:React.FC = () => {
   return (
-    <div className='ml-8 max-md:ml-0 '>
+    <div className='ml-8 max-lg:ml-0 '>
         {/* header */}
         <PaymentHeader/>
         <PaymentBanner/>

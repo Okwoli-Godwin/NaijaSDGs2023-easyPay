@@ -12,7 +12,7 @@ const CTA:React.FC = () => {
                             Empower your business with us
                         </h3>
                         <p className="text-gray-300 leading-relaxed mt-3">
-                            Nam erat risus, sodales sit amet lobortis ut, finibus eget metus. Cras aliquam ante ut tortor posuere feugiat. Duis sodales nisi id porta lacinia.
+                        We are dedicated to providing you with the best experience. We provide innovative and friendly solutions for businesses whether big or small.
                         </p>
                     </div>
                     <div className="mt-5 items-center justify-center gap-3 sm:flex">
