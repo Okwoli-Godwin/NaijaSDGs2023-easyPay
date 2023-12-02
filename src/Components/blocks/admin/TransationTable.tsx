@@ -11,6 +11,8 @@ const TransactionTable = () => {
       type: "Food",
       date: "March 29, 2022",
       amount: 100,
+      id: "fff222333444",
+      status: "failed",
     },
     {
       avatar: "https://randomuser.me/api/portraits/men/86.jpg",
@@ -19,6 +21,8 @@ const TransactionTable = () => {
       type: "Shopping",
       date: "March 27, 2022",
       amount: 90,
+      id: "fff222333445",
+      status: "succeeded",
     },
     {
       avatar: "https://randomuser.me/api/portraits/women/79.jpg",
@@ -27,6 +31,8 @@ const TransactionTable = () => {
       type: "Others",
       date: "March 25, 2022",
       amount: 80,
+      id: "fff222333446",
+      status: "succeeded",
     },
     {
       avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
@@ -35,6 +41,8 @@ const TransactionTable = () => {
       type: "Food",
       date: "March 23, 2022",
       amount: 120,
+      id: "fff222333447",
+      status: "failed",
     },
     {
       avatar:
@@ -44,6 +52,8 @@ const TransactionTable = () => {
       type: "Shopping",
       date: "March 21, 2022",
       amount: 75,
+      id: "fff222333448",
+      status: "succeeded",
     },
   ];
 
@@ -64,7 +74,8 @@ const TransactionTable = () => {
               <th className="py-3 px-6">Type</th>
               <th className="py-3 px-6">Date</th>
               <th className="py-3 px-6">Amount</th>
-              <th className="py-3 px-6"></th>
+              <th className="py-3 px-6">ID</th>
+              <th className="py-3 px-6">Status</th>
             </tr>
           </thead>
           <tbody className="text-gray-600 divide-y">
@@ -102,6 +113,14 @@ const TransactionTable = () => {
                     </span>
                     {`${item.amount}k`}
                   </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">{item.id}</td>
+                <td
+                  style={{
+                    color: item.status === "failed" ? "#e96a6aef" : "#19dd82",
+                  }}
+                  className="px-6 py-4 whitespace-nowrap">
+                  {item.status === "failed" ? "failed" : "succeeded"}
                 </td>
               </tr>
             ))}
