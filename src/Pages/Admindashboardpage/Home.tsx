@@ -9,6 +9,7 @@ import TransactionsHistory from "../../Components/blocks/admin/comps/medium/tran
 import QuickTransactions from "../../Components/blocks/admin/comps/medium/quickTransactions";
 import Goals from "../../Components/blocks/admin/comps/medium/goals";
 import styles from "../../Components/blocks/admin/styles/home.module.css";
+import Usehook from "../../Usehook";
 
 const HomePage: React.FC = () => {
   return (
@@ -55,7 +56,7 @@ const HomePage: React.FC = () => {
           <div className={styles.add_Card}>
             <div className={styles.card_title}>
               <h4>My Card</h4>
-              <button className={styles.card_button}>Add Card</button>
+              <Usehook />
             </div>
             <img className={styles.card_image} src={CardImage} alt="" />
           </div>
