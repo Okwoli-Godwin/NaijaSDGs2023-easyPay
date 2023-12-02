@@ -25,7 +25,7 @@ const Stafflayout = () => {
 
 <div className="w-full bg-slate-50">
 {
-   location.pathname.includes("savings") ? null : <Staffdashboardhead title="Dashboard"/>
+   location.pathname.includes("savings") ? null : <Staffdashboardhead title={`${location.pathname.includes("staff/transactions") ? "Transaction History" : "Dashboard"}`}/>
    }
 
 <div className="w-full px-5 max-md:px-3 py-3 max-md:mb-16">
