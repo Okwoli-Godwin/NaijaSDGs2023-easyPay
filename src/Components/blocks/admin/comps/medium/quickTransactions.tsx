@@ -12,25 +12,25 @@ const QuickTransactions: React.FC = () => {
       <div className={`flex gap-6 ${styles.nobars}`}>
         <div className="w-[40px]">
           <Photo size={40} />
-          <div className="text-center text-sm font-medium leading-4 mt-1">
+          <div className="text-center text-[12px] font-medium leading-4 mt-1">
             Michael Jordan
           </div>
         </div>
         <div className="w-[40px]">
           <Photo size={40} />
-          <div className="text-center text-sm font-medium leading-4 mt-1">
+          <div className="text-center text-[12px] font-medium leading-4 mt-1">
             Edelyn Sandra
           </div>
         </div>
         <div className="w-[40px]">
           <Photo size={40} photo={celyn} />
-          <div className="text-center text-sm font-medium leading-4 mt-1">
+          <div className="text-center text-[12px] font-medium leading-4 mt-1">
             Celyn Gustav
           </div>
         </div>
         <div className="w-[40px]">
           <Photo size={40} />
-          <div className="text-center text-sm font-medium leading-4 mt-1">
+          <div className="text-center text-[12px] font-medium leading-4 mt-1">
             Ahmed Azhar
           </div>
         </div>
