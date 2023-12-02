@@ -46,7 +46,7 @@ const AdminSignup = () => {
                 timerProgressBar: true,
 
                 willClose: () => {
-                    navigate("/")
+                    navigate("/admin")
                 }
             })
         },

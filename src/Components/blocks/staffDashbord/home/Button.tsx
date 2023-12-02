@@ -9,7 +9,7 @@ interface btnData{
 
 const Button:React.FC<btnData> = ({onclick, icon, text}) => {
   return (
-    <button onClick={onclick} className="bg-indigo-100 hover:bg-indigo-50 transition-all ease-in duration-150 h-[13rem] w-[20rem] max-md:w-full rounded-3xl shadow flex flex-col justify-center items-center">
+    <button onClick={onclick} className="bg-indigo-100 hover:bg-indigo-50 transition-all ease-in duration-150 h-[13rem] w-[20rem] max-md:w-full rounded-2xl shadow flex flex-col justify-center items-center">
     <p className="text-3xl text-indigo-600">
    {icon}
     </p>

@@ -36,7 +36,7 @@ export const Element = createBrowserRouter([
       },
       {
         path: "staffs",
-        element: <Staffs />,
+        element: <Staffs/>,
       },
       {
         path: "payments",

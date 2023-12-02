@@ -23,7 +23,7 @@ const Staffhome = () => {
 
 
   return (
-    <div className="w-full py-5 relative">
+    <div className="w-full py-5 max-md:px-4 relative">
        <div className=" grid grid-cols-5 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6">
         <Cards title="Balance" figure="₦50000" figureColor="text-green-500" bottomText="Available"/>
         <Cards title="Wallet" figure="1234567890" figureColor="text-indigo-500" bottomText="Wallet number"/>
@@ -55,11 +55,11 @@ const Staffhome = () => {
 
    {/* airtime purchase */}
 
-  <div className=" rounded-3xl  flex justify-start ml-4 max-md:ml-0 items-center">
+  <div className=" rounded-2xl  flex justify-start ml-4 max-md:ml-0 items-center">
   <Button onclick={() => setModalOpen(true)} text="Buy Data/Airtime" icon={ <MdOutlineWifiCalling />}/>
 
   </div>
-  <div className=" rounded-3xl  flex justify-start ml-4 max-md:ml-0 items-center">
+  <div className=" rounded-2xl  flex justify-start ml-4 max-md:ml-0 items-center">
   <Button onclick={()=>setBillOpen(true)} text="Pay Bills" icon={ <MdOutlineWifiCalling />}/>
 
   </div>

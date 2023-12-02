@@ -1,8 +1,6 @@
 
 import {
   MdDashboard,
-
-  MdManageHistory,
   MdPayment 
 } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
@@ -27,8 +25,8 @@ const Staffsidebar = () => {
     <div
       className={`${
         show
-          ? "w-[210px] bg-[#706DF2]"
-          : "w-[90px] bg-[#706DF2]"
+          ? "w-[210px] bg-indigo-600"
+          : "w-[90px] bg-indigo-600"
       }  flex items-center relative justify-center  transition-all ease-linear duration-[200ms]  max-md:hidden max-lg:hidden max-md:w-full h-screen max-md:h-full max-lg:w-[8%]`}
     >
       <div
@@ -138,7 +136,7 @@ const Staffsidebar = () => {
 
           {/* toggle */}
           <div
-            className="p-3 cursor-pointer text-lg shadow-md bg-[#706DF2] z-30 rounded-full text-white absolute top-14 -right-5"
+            className="p-3 cursor-pointer text-lg shadow-md bg-indigo-600 z-30 rounded-full text-white absolute top-14 -right-5"
             onClick={() => setShow(!show)}
           >
             <BsArrowLeftRight />

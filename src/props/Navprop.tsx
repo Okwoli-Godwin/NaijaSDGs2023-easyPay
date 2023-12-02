@@ -2,7 +2,7 @@ import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { navpropsData } from "../types";
 
-const Navprop: FC<navpropsData> = ({ text, icon, route, color, size }) => {
+const Navprop: FC<navpropsData> = ({ text, icon, route, size }) => {
   return (
     <div>
       <NavLink

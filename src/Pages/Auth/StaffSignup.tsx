@@ -45,7 +45,7 @@ const StaffSignup = () => {
           timerProgressBar: true,
     
           willClose: () => {
-            navigate("/");
+            navigate("/staff");
           },
         });
       },
