@@ -12,6 +12,9 @@ type iBalance = {
 
 const Balance: React.FC<iBalance> = ({ balance }) => {
   const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
   return (
     <>
       <div className="rounded-[5px] border-[1px] overflow-hidden">
@@ -31,13 +34,15 @@ const Balance: React.FC<iBalance> = ({ balance }) => {
               <Button
                 onclick={() => setShow(true)}
                 size={44}
-                title="+QUICK SAVE"
+                title="SAVE NOW"
               />
             </div>
           </div>
         </div>
         <div className="grid grid-cols-3">
-          <div className="flex justify-center items-center cursor-pointer py-4">
+          <div
+            onClick={() => setShow1(true)}
+            className="flex justify-center items-center cursor-pointer py-4">
             <div className="flex gap-3 items-center w-fit">
               <div>
                 <FaPercentage className="text-[var(--accent-color)]" />
@@ -45,7 +50,9 @@ const Balance: React.FC<iBalance> = ({ balance }) => {
               <small>Interests</small>
             </div>
           </div>
-          <div className="flex border-x-[1px] justify-center items-center cursor-pointer py-4">
+          <div
+            onClick={() => setShow2(true)}
+            className="flex border-x-[1px] justify-center items-center cursor-pointer py-4">
             <div className="flex gap-3 items-center w-fit">
               <div>
                 <AiFillBank className="text-[var(--accent-color)]" />
@@ -53,7 +60,9 @@ const Balance: React.FC<iBalance> = ({ balance }) => {
               <small>Withdraw</small>
             </div>
           </div>
-          <div className="flex justify-center items-center cursor-pointer py-4">
+          <div
+            onClick={() => setShow3(true)}
+            className="flex justify-center items-center cursor-pointer py-4">
             <div className="flex gap-3 items-center w-fit">
               <div>
                 <RiSettingsFill className="text-[var(--accent-color)]" />
@@ -64,6 +73,9 @@ const Balance: React.FC<iBalance> = ({ balance }) => {
         </div>
       </div>
       {show && <SavingsOption cancel={() => setShow(false)} />}
+      {show1 && <SavingsOption cancel={() => setShow1(false)} />}
+      {show2 && <SavingsOption cancel={() => setShow2(false)} />}
+      {show3 && <SavingsOption cancel={() => setShow3(false)} />}
     </>
   );
 };
