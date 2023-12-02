@@ -28,7 +28,7 @@ const Adminsidebar: React.FC = () => {
           <div className="w-full max-[800px]:h-full flex justify-center">
             <div
               //   style={{ width: "calc(100% - 10px)" }}
-              className={`grid grid-rows-6 max-[800px]:grid-rows-1 max-[800px]:grid-cols-4 h-[270px] max-[800px]:h-full gap-[5px] ${styles.partialwidth}`}>
+              className={`grid grid-rows-7 max-[800px]:grid-rows-1 max-[800px]:grid-cols-4 h-[270px] max-[800px]:h-full gap-[5px] ${styles.partialwidth}`}>
               <NavBar
                 page="Dashboard"
                 icon={<RiHome6Fill />}

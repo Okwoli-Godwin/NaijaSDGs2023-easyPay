@@ -15,7 +15,7 @@ const ThreeSavings: React.FC = () => {
         color="purple"
       />
       <SavingsCard
-        savingsType="Easy Naira"
+        savingsType="Flex Naira"
         icon={<LuFilm />}
         description="Flexible savings for emergencies. Free transfers, withdrawals etc. 8% p.a"
         balance={0}
