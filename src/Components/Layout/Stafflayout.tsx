@@ -1,9 +1,8 @@
 import { Outlet } from "react-router-dom"
 import { Staffdashboardhead, Staffsidebar } from ".."
 import TabletHeader from "../blocks/staffDashbord/tabletHeader"
-
 import {useLocation} from "react-router-dom"
-import MobileHeader from "../blocks/staffDashbord/MobileHeader"
+
 
 
 const Stafflayout = () => {
@@ -17,7 +16,6 @@ const Stafflayout = () => {
       <div className="h-full sticky top-0 z-20">
      <Staffsidebar />
      <TabletHeader/>
-     <MobileHeader/>
      </div>
 
     <> 
