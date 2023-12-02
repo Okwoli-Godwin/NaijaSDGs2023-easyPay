@@ -30,3 +30,7 @@ export const adminLogin = async({
         companyname
     }).then((res) => res.data)
 }
+
+export const getOneAdmin = async (id: any) => {
+  return await axios.get(`${live}/${id}`).then((res) => res.data);
+};
