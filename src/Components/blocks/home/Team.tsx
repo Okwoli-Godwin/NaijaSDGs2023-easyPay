@@ -57,7 +57,7 @@ const Team:React.FC = () => {
                             Meet our team
                         </h3>
                         <p className="text-gray-600 mt-3">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy.
+                            Meet the beautiful young minds behind the application top compamies and brands use and love.
                         </p>
                     </div>
                     <div className="mt-12">

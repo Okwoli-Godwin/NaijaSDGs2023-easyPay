@@ -1,5 +1,6 @@
 import { Typewriter } from 'react-simple-typewriter';
 import img from "../assets/skyscraper.jpeg"
+import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -21,9 +22,11 @@ const Hero = () => {
             Get a unique bank account number that enables your company to pay
             employees' salaries through the wallet.
           </p>
-           <button className="w-[220px] h-[45px] bg-indigo-600 rounded-[4px] flex justify-center items-center text-[#fff] mt-[40px]">
+          <NavLink to="signupoption">
+          <button className="w-[220px] h-[45px] bg-indigo-600 rounded-[4px] flex justify-center items-center text-[#fff] mt-[40px]">
               Get Started
             </button>
+          </NavLink>
           </div>
         </div>
     </div>
