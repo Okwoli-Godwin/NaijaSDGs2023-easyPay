@@ -16,7 +16,7 @@ const Layout: React.FC = () => {
         </div>
         <div className="flex-1 h-full relative overflow-x-hidden">
           {/* header goes here... */}
-          <div className="w-full h-[70px] sticky top-0 right-0 bg-[var(--primary-color)]">
+          <div className="w-full h-[70px] sticky z-[2] top-0 right-0 bg-[var(--primary-color)]">
             <Admindashboardhead />
           </div>
           {/* and the pages go here... */}
@@ -28,7 +28,7 @@ const Layout: React.FC = () => {
       {/* this piece of layout is for mobile screens */}
       <div className="hidden max-[800px]:block h-screen w-full">
         {/* header goes here... */}
-        <div className="sticky top-0 left-0 h-[48px] w-full bg-[var(--primary-color)]">
+        <div className="sticky z-[2] top-0 left-0 h-[48px] w-full bg-[var(--primary-color)]">
           <Admindashboardhead />
         </div>
         {/* pages go here... */}
