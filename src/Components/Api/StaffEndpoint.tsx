@@ -11,12 +11,23 @@ export interface staffData {
   password: string;
   position: string;
   _id : string
+
 }
 
+// "subAccount": "1234567",
+//   "turnOffNotification": false,
+//   "airtimes": [
+//     {
+//       "countryToSend": "Nigeria",
+//       "phoneNumber": "+2341000000000",
+//       "valueInUSD": 5
+//     }
+//   ]
+
 export interface aitimeData{
-  number: string;
-  amount: string;
-  networkProvider: string;
+
+  subAccount: string;
+  turnOffNotification: false,
 
 }
 
