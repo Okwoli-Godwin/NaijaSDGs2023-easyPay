@@ -75,7 +75,8 @@ const GoalModal = ({ isOpen, onClose }:any) => {
   </span>
 </label>
 </div>
-{/* recharge amount */}
+
+{/* funding source */}
 <div className="mt-10">
     <h2 className="mb-2">Select Funding source</h2>
 
