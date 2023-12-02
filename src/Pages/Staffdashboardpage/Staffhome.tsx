@@ -47,6 +47,7 @@ const Staffhome = () => {
    <Favourites img={avatar} username="Anthoney Joshua"/>
    <Favourites img={avatar} username="Victor Joshua"/>
    <Favourites img={avatar} username="Anthoney Joshua"/>
+   <Favourites img={avatar} username="Anthoney Joshua"/>
 
    </div>
     </div>
