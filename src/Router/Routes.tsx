@@ -18,6 +18,7 @@ import AminSavings from "../Pages/Admindashboardpage/aminSavings";
 import Easybank from "../Pages/Admindashboardpage/easyBank";
 import Payments from "../Pages/Staffdashboardpage/Payments";
 import Settings from "../Pages/Staffdashboardpage/Settings";
+import Financials from "../Pages/Staffdashboardpage/Financials";
 
 export const Element = createBrowserRouter([
   {
@@ -91,7 +92,7 @@ export const Element = createBrowserRouter([
       },
       {
         path: "financials",
-        element: <p className="flex h-full justify-center items-center text-3xl font-semibold">Working on something Amazing here</p>,
+        element: <Financials/>,
       },
       {
         path: "settings",
