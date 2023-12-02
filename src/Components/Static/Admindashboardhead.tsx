@@ -11,6 +11,7 @@ const Adminashboardhead: React.FC = () => {
     location.pathname.includes("staffs") ||
     location.pathname.includes("payments") ||
     location.pathname.includes("settings") ||
+    location.pathname.includes("savings") ||
     location.pathname.includes("notifications");
   return (
     <div className="w-full z-[2] py-2 h-full bg-[var(--primary-color)] flex justify-center items-end">
@@ -35,6 +36,7 @@ const Adminashboardhead: React.FC = () => {
               location.pathname.includes("financials") === false &&
               location.pathname.includes("transaction-history") === false &&
               location.pathname.includes("settings") === false &&
+              location.pathname.includes("savings") === false &&
               location.pathname.includes("notifications") === false
                 ? "dashboard"
                 : location.pathname.includes("staffs")
@@ -47,6 +49,8 @@ const Adminashboardhead: React.FC = () => {
                 ? "transactions"
                 : location.pathname.includes("settings")
                 ? "settings"
+                : location.pathname.includes("savings")
+                ? "savings"
                 : location.pathname.includes("notifications")
                 ? "notifications"
                 : ""}

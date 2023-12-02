@@ -3,7 +3,7 @@ import React from "react";
 
 import { RiHome6Fill, RiExchangeBoxFill, RiSettingsFill } from "react-icons/ri";
 import { BsFillPeopleFill } from "react-icons/bs";
-import { MdPayments } from "react-icons/md";
+import { MdPayments, MdSavings } from "react-icons/md";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
 import { useLocation } from "react-router-dom";
 import { TfiMoreAlt } from "react-icons/tfi";
@@ -38,7 +38,8 @@ const Adminsidebar: React.FC = () => {
                   location.pathname.includes("financials") === false &&
                   location.pathname.includes("transaction-history") === false &&
                   location.pathname.includes("settings") === false &&
-                  location.pathname.includes("notifications") === false
+                  location.pathname.includes("notifications") === false &&
+                  location.pathname.includes("savings") === false
                     ? true
                     : false
                 }
@@ -69,6 +70,13 @@ const Adminsidebar: React.FC = () => {
                 }
                 path="financials"
                 onclick={() => setMore(false)}
+              />
+              <NavBar
+                page="Savings"
+                icon={<MdSavings />}
+                is_active={location.pathname.includes("savings") ? true : false}
+                path="savings"
+                dektop_only
               />
               <NavBar
                 page="Transactions"
