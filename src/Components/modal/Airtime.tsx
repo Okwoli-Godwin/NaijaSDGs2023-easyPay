@@ -1,4 +1,5 @@
 import { IoMdCloseCircle } from "react-icons/io";
+import { FaArrowRight } from "react-icons/fa";
 import "./style.css"
 
 const Airtime = ({ isOpen, onClose }:any) => {
@@ -26,7 +27,7 @@ const Airtime = ({ isOpen, onClose }:any) => {
 
 {/* phone number input */}
 
-<div className="mt-10">
+<div className="mt-6">
     <h2 className="mb-2">Enter recipient mobile number</h2>
 
 <label
@@ -51,56 +52,56 @@ const Airtime = ({ isOpen, onClose }:any) => {
 </div>
 
 {/* select network provider */}
-<div className="mt-10">
+<div className="mt-8">
 
 <h3 className="mb-5 ">Select Network Provider</h3>
 <ul className="grid w-full gap-6 grid-cols-2">
     <li>
-        <input type="radio" id="mtn" name="mtn" value="mtn" className="hidden peer" required/>
+        <input type="radio" id="mtn" name="networkProvider" value="mtn" className="hidden peer" required/>
         <label htmlFor="mtn" className="inline-flex items-center justify-between w-full p-5 text-gray-700 bg-yellow-400  rounded-lg cursor-pointer  peer-checked:border-indigo-600 peer-checked:text-indigo-600  hover:bg-yellow-300 transition-all ease-in">                           
             <div className="block">
                 <div className="w-full text-lg font-semibold">MTN</div>
                
             </div>
-            <svg className="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
+          <p >
+          <FaArrowRight />
+          </p>
         </label>
     </li>
     <li>
-        <input type="radio" id="Glo" name="Glo" value="Glo" className="hidden peer" required/>
+        <input type="radio" id="Glo" name="networkProvider" value="Glo" className="hidden peer" required/>
         <label htmlFor="Glo" className="inline-flex items-center justify-between w-full p-5 text-white bg-lime-500  rounded-lg cursor-pointer  peer-checked:border-indigo-600 peer-checked:text-indigo-600  hover:bg-lime-500 transition-all ease-in">                           
             <div className="block">
                 <div className="w-full text-lg font-semibold">Glo</div>
                
             </div>
-            <svg className="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
+            <p >
+          <FaArrowRight />
+          </p>
         </label>
     </li>
     <li>
-        <input type="radio" id="9Mobile" name="9Mobile" value="9Mobile" className="hidden peer" required/>
+        <input type="radio" id="9Mobile" name="networkProvider" value="9Mobile" className="hidden peer" required/>
         <label htmlFor="9Mobile" className="inline-flex items-center justify-between w-full p-5 text-white bg-green-600  rounded-lg cursor-pointer  peer-checked:border-indigo-600 peer-checked:text-indigo-600  hover:bg-green-500 transition-all ease-in">                           
             <div className="block">
                 <div className="w-full text-lg font-semibold">9Mobile</div>
                
             </div>
-            <svg className="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
+            <p >
+          <FaArrowRight />
+          </p>
         </label>
     </li>
     <li>
-        <input type="radio" id="Airtel" name="Airtel" value="Airtel" className="hidden peer" required/>
+        <input type="radio" id="Airtel" name="networkProvider" value="Airtel" className="hidden peer" required/>
         <label htmlFor="Airtel" className="inline-flex text-white items-center justify-between w-full p-5  bg-red-500  rounded-lg cursor-pointer  peer-checked:border-indigo-600 peer-checked:text-indigo-600  hover:bg-red-400 transition-all ease-in">                           
             <div className="block">
                 <div className="w-full text-lg  font-semibold">Airtel</div>
                
             </div>
-            <svg className="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
+            <p >
+          <FaArrowRight />
+          </p>
         </label>
     </li>
   
@@ -110,7 +111,7 @@ const Airtime = ({ isOpen, onClose }:any) => {
 </div>
 
 {/* recharge amount */}
-<div className="mt-10">
+<div className="mt-8">
     <h2 className="mb-2">Enter recharge amount</h2>
 
 <label
@@ -134,8 +135,19 @@ const Airtime = ({ isOpen, onClose }:any) => {
 </label>
 </div>
 
+{/* funding source */}
+<div className="mt-8">
+    <h2 className="mb-2">Select Funding source</h2>
+
+<select className="w-full py-4 bg-white border px-3 rounded-lg">
+    <option value="" disabled> select source</option>
+    <option value="savings" > Savings</option>
+   
+</select>
+</div>
+
 {/* submite button */}
-<div className="mt-16 w-full"> 
+<div className="mt-12 w-full"> 
 <button   className="inline-block w-full rounded-lg border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 transition-all ease-in duration-200"
 
 >
