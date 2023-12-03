@@ -13,8 +13,10 @@ import AdminLogin from "../Pages/Auth/AdminLogin";
 import StaffLogin from "../Pages/Auth/StaffLogin";
 import Savings from "../Pages/Staffdashboardpage/Savings";
 import Staffs from "../Pages/Admindashboardpage/Staffs";
+import Transactions from "../Pages/Staffdashboardpage/Transactions";
 import AminSavings from "../Pages/Admindashboardpage/aminSavings";
 import Easybank from "../Pages/Admindashboardpage/easyBank";
+import Payments from "../Pages/Staffdashboardpage/Payments";
 
 export const Element = createBrowserRouter([
   {
@@ -39,6 +41,7 @@ export const Element = createBrowserRouter([
         path: "staffs",
         element: <Staffs />,
       },
+
       {
         path: "payments",
         element: <div>Payments</div>,
@@ -76,6 +79,14 @@ export const Element = createBrowserRouter([
       {
         path: "savings",
         element: <Savings />,
+      },
+      {
+        path: "transactions",
+        element: <Transactions />,
+      },
+      {
+        path: "payments",
+        element: <Payments />,
       },
     ],
   },

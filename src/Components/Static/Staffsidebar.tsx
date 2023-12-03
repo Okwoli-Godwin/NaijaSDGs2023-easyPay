@@ -1,6 +1,8 @@
 
 import {
   MdDashboard,
+
+  // MdManageHistory,
   MdPayment 
 } from "react-icons/md";
 import { RiLogoutCircleLine } from "react-icons/ri";
@@ -73,9 +75,9 @@ const Staffsidebar = () => {
               />
              
               <Navprop
-                text={show ? "Fund Transfers" : ""}
+                text={show ? "Transactions" : ""}
                 icon={<BiTransfer />}
-                route="fund-transfers"
+                route="transactions"
                 color={show ? "[#ff6e00]" : "white"}
                 size={show ? "xl" : "3xl"}
               />
