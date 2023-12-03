@@ -1,18 +1,21 @@
-import { MdDashboard, MdManageHistory } from "react-icons/md";
+import { MdDashboard, MdManageHistory, MdPayment } from "react-icons/md";
 
 import { BsReceipt } from "react-icons/bs";
 
 import { RiLogoutCircleLine } from "react-icons/ri";
 import Navprop from "../../../props/Navprop";
 import { TbPigMoney } from "react-icons/tb";
+import { BiTransfer } from "react-icons/bi";
+import { PiChartBarFill } from "react-icons/pi";
+import { IoSettings } from "react-icons/io5";
 
 const TabletHeader = () => {
   return (
-    <div className="w-[80px] h-screen hidden bg-blue-500 max-lg:block max-md:hidden">
+    <div className="w-[80px] h-screen hidden bg-indigo-600 max-lg:block max-md:hidden">
       <div className="w-full h-full flex items-center justify-center ">
         <div className="w-[95%] h-[95%] flex flex-col items-center gap-6 ">
           {/* logo */}
-          <h1 className="text-3xl text-white">EP</h1>
+          <h1 className="text-3xl text-white font-bold">EP</h1>
           <hr className=" w-full" />
 
           {/* navigation */}
@@ -20,12 +23,25 @@ const TabletHeader = () => {
             <div className="flex flex-col gap-8">
               <Navprop
                 icon={<MdDashboard />}
-                route=""
+                route="/staff"
                 color="white"
                 size="3xl"
               />
 
-
+<Navprop
+                
+                icon={<BiTransfer />}
+                route="transactions"
+                color="white"
+                size="3xl"
+              />
+<Navprop
+                
+                icon={<MdPayment />}
+                route="payments"
+                color="white"
+                size="3xl"
+              />
 
               <Navprop
                 icon={<TbPigMoney />}
@@ -34,14 +50,14 @@ const TabletHeader = () => {
                 size="3xl"
               />
               <Navprop
-                icon={<BsReceipt />}
-                route="bills"
+                icon={<PiChartBarFill />}
+                route="financials"
                 color="white"
                 size="3xl"
               />
               <Navprop
-                icon={<MdManageHistory />}
-                route="history"
+                icon={<IoSettings />}
+                route="settings"
                 color="white"
                 size="3xl"
               />

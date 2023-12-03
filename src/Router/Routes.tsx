@@ -88,6 +88,14 @@ export const Element = createBrowserRouter([
         path: "payments",
         element: <Payments />,
       },
+      {
+        path: "financials",
+        element: <p className="flex h-full justify-center items-center text-3xl font-semibold">Working on something Amazing here</p>,
+      },
+      {
+        path: "settings",
+        element: <p className="flex h-full justify-center items-center text-3xl font-semibold">Working on something Amazing here</p>,
+      },
     ],
   },
   {

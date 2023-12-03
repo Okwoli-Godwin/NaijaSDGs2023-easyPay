@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  font-family: Ubuntu;
+
+  font-family: 'Jost', sans-serif;
   background-color: #fff;
   color: #242424;
   --primary-color: #fff;
