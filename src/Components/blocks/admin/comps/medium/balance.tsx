@@ -34,7 +34,7 @@ const Balance: React.FC<iBalance> = ({ balance }) => {
               <Button
                 onclick={() => setShow(true)}
                 size={44}
-                title="+QUICK SAVE"
+                title="SAVE NOW"
               />
             </div>
           </div>
