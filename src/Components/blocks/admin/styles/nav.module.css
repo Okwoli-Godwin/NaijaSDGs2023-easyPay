@@ -1,0 +1,40 @@
+@keyframes poper {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slider {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes appear {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.278);
+  }
+}
+
+.popup {
+  animation: poper 0.3s ease-out forwards;
+}
+.slide {
+  animation: slider 0.3s ease-out forwards;
+}
+.fadein {
+  animation: appear 0.4s ease-out forwards;
+}
+.partialwidth {
+  width: calc(100% - 40px);
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+}

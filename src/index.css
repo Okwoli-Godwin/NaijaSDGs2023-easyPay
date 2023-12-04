@@ -3,25 +3,12 @@
 @tailwind utilities;
 
 :root {
-  font-family: Ubuntu;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
+  font-family: 'Jost', sans-serif;
   background-color: #fff;
   color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --primary-color: #fff;
+  --secondary-color: #5c5c5c;
+  --accent-color: #716df2;
+  --accent-color-lite: #888df2;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
