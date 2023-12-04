@@ -270,6 +270,9 @@ const Bills:React.FC<BillsProps> = ({ isOpen, onClose }) => {
 
           {/* Submit button */}
           <button
+          onClick={(e)=>{
+e.preventDefault()
+          }}
             type="submit"
             className=" w-full rounded-lg py-3 bg-indigo-500 text-white mt-8 hover:bg-indigo-600"
           >

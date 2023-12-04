@@ -149,7 +149,9 @@ const Airtime = ({ isOpen, onClose }:any) => {
 {/* submite button */}
 <div className="mt-12 w-full"> 
 <button   className="inline-block w-full rounded-lg border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 transition-all ease-in duration-200"
-
+onClick={(e)=>{
+e.preventDefault()
+}}
 >
   Recharge</button>
 </div>
